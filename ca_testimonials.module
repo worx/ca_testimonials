@@ -5,3 +5,48 @@
  */
 
 include_once('ca_testimonials.features.inc');
+
+/**
+ * Implements hook_menu()
+ */
+function ca_testimonials_menu() {
+/**  $items['admin/config/worx_features'] = array(
+    'title' => 'Worx Features',
+    'description' => 'Configure Worx Features',
+    'position' => 'right',
+    'weight' => -20,
+    'page callback' => 'system_admin_menu_block_page',
+    'access arguments' => array('access administration pages'),
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  );*/
+  $items['admin/config/worx_features/testimonials'] = array(
+    'title' => 'Testimonials Configuration',
+    'description' => 'Override settings for ca_testimonials',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('ca_testimonials_settings_form'),
+    'access arguments' => array('worx features admin'),
+    'file' => 'ca_testimonials.admin.inc',
+    'file path' => drupal_get_path('module', 'ca_testimonials'),
+    'type' => MENU_NORMAL_ITEM,
+  );
+  $items['admin/config/worx_features/testimonials/general'] = array(
+    'title' => 'General Settings',
+    'description' => 'Override settings for ca_testimonials',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('ca_testimonials_settings_form'),
+    'access arguments' => array('worx features admin'),
+    'file' => 'ca_testimonials.admin.inc',
+    'file path' => drupal_get_path('module', 'ca_testimonials'),
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+  );
+  
+  return $items;
+}
+
+/**
+ * implements hook_menu_alter().
+ */
+function ca_testimonials_menu_alter(&$items) {
+  $items['testimonial']['title'] = variable_get('ca_testimonials_menu_title', 'Testimonials');
+}
