@@ -50,3 +50,24 @@ function ca_testimonials_menu() {
 function ca_testimonials_menu_alter(&$items) {
   $items['testimonial']['title'] = variable_get('ca_testimonials_menu_title', 'Testimonials');
 }
+
+/**
+ * Implements hook_panels_pre_render().
+ */
+function ca_testimonials_panels_pre_render($panel, $renderer) {
+  if (isset($panel->content['8']) && $panel->content['8']->subtype == 'ca_testimonial-ca_testimonial_list_1') {
+    $panel->title = variable_get('ca_testimonials_panel_title', 'Testimonials');
+  }
+}
+
+/**
+ * Implements hook_views_pre_render().
+ */
+function ca_testimonials_views_pre_view(&$view, &$display_id, &$args) {
+  if ($display_id == 'ca_testimonial_list_1') {
+    $view->set_items_per_page(variable_get('ca_testimonials_list_count', 5));
+  }
+  elseif ($display_id == 'ca_testimonial_block_1') {
+    $view->set_items_per_page(variable_get('ca_testimonials_block_count', 1));
+  }
+}

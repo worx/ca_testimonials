@@ -24,6 +24,27 @@ function ca_testimonials_settings_form() {
     '#required' => TRUE,
     '#description' => t('What would you like the menu title to be?'),
   );
+  $form['ca_testimonials_panel_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Panel Title'),
+    '#default_value' => variable_get('ca_testimonials_panel_title', 'Testimonials'),
+    '#required' => TRUE,
+    '#description' => t('What would you like the panel title to be?'),
+  );
+  $form['ca_testimonials_list_count'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Testimonials per page'),
+    '#default_value' => variable_get('ca_testimonials_list_count', 5),
+    '#required' => TRUE,
+    '#description' => t('How many testimonials would you like displayed per page?'),
+  );
+  $form['ca_testimonials_block_count'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Testimonials in the block'),
+    '#default_value' => variable_get('ca_testimonials_block_count', 1),
+    '#required' => TRUE,
+    '#description' => t('How many testimonials would you like displayed in the block?'),
+  );
   
   return system_settings_form($form);
 }
