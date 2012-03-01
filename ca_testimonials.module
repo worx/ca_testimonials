@@ -10,16 +10,6 @@ include_once('ca_testimonials.features.inc');
  * Implements hook_menu()
  */
 function ca_testimonials_menu() {
-/**  $items['admin/config/worx_features'] = array(
-    'title' => 'Worx Features',
-    'description' => 'Configure Worx Features',
-    'position' => 'right',
-    'weight' => -20,
-    'page callback' => 'system_admin_menu_block_page',
-    'access arguments' => array('access administration pages'),
-    'file' => 'system.admin.inc',
-    'file path' => drupal_get_path('module', 'system'),
-  );*/
   $items['admin/config/worx_features/testimonials'] = array(
     'title' => 'Testimonials Configuration',
     'description' => 'Override settings for ca_testimonials',
@@ -55,7 +45,7 @@ function ca_testimonials_menu_alter(&$items) {
  * Implements hook_panels_pre_render().
  */
 function ca_testimonials_panels_pre_render($panel, $renderer) {
-  if (isset($panel->content['8']) && $panel->content['8']->subtype == 'ca_testimonial-ca_testimonial_list_1') {
+  if (isset($panel->content['new-5']) && $panel->content['new-5']->subtype == 'ca_testimonial-ca_testimonial_list_1') {
     $panel->title = variable_get('ca_testimonials_panel_title', 'Testimonials');
   }
 }
