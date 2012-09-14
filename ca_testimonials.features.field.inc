@@ -10,7 +10,7 @@
 function ca_testimonials_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-ca_testimonial-body'
+  // Exported field: 'node-ca_testimonial-body'.
   $fields['node-ca_testimonial-body'] = array(
     'field_config' => array(
       'active' => '1',
@@ -33,6 +33,7 @@ function ca_testimonials_field_default_fields() {
           0 => 'format',
         ),
       ),
+      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '0',
@@ -84,7 +85,7 @@ function ca_testimonials_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ca_testimonial-field_ca_testimonial_t_image'
+  // Exported field: 'node-ca_testimonial-field_ca_testimonial_t_image'.
   $fields['node-ca_testimonial-field_ca_testimonial_t_image'] = array(
     'field_config' => array(
       'active' => '1',
@@ -105,6 +106,7 @@ function ca_testimonials_field_default_fields() {
           0 => 'fid',
         ),
       ),
+      'locked' => '0',
       'module' => 'image',
       'settings' => array(
         'default_image' => 0,
@@ -141,6 +143,7 @@ function ca_testimonials_field_default_fields() {
       'required' => 0,
       'settings' => array(
         'alt_field' => 0,
+        'default_image' => 0,
         'file_directory' => '',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '10 MB',
@@ -162,7 +165,7 @@ function ca_testimonials_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-ca_testimonial-field_ca_testimonial_t_link'
+  // Exported field: 'node-ca_testimonial-field_ca_testimonial_t_link'.
   $fields['node-ca_testimonial-field_ca_testimonial_t_link'] = array(
     'field_config' => array(
       'active' => '1',
@@ -172,6 +175,7 @@ function ca_testimonials_field_default_fields() {
       'field_name' => 'field_ca_testimonial_t_link',
       'foreign keys' => array(),
       'indexes' => array(),
+      'locked' => '0',
       'module' => 'link',
       'settings' => array(
         'attributes' => array(
