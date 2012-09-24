@@ -1,4 +1,4 @@
-#testimonial-images, .views-field-field-ca-testimonial-t-image {
+.views-field-field-ca-testimonial-t-image {
   float: left;
   padding-right: 30px;
 }
@@ -7,12 +7,11 @@
   clear: both;
 }
 
-.view-ca-testimonial .views-field-title {
+.view-display-id-ca_testimonial_list_1 .views-field-title {
   margin: 0 0 0 230px;
 }
-
-.front .view-ca-testimonial .views-field-title { 
-  margin: 0 0 0 0px; 
+.view-display-id-ca_testimonial_list_1 .views-field-field-ca-testimonial-t-image {
+    margin-top: -53px;
 }
 
 .pane-node-field-ca-testimonial-t-link {
