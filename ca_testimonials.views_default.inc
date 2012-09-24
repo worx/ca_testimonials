@@ -126,12 +126,6 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '700',
   );
-  /* Field: Global: Custom text */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   /* Field: Content: AddToAny link */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
@@ -139,6 +133,12 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['addtoany_link']['label'] = '';
   $handler->display->display_options['fields']['addtoany_link']['element_class'] = 'ca-addtoany-feature';
   $handler->display->display_options['fields']['addtoany_link']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
   $handler->display->display_options['pane_title'] = 'CA Testimonials: List View Template One';
 
   /* Display: CA Testimonials: Admin */
@@ -329,8 +329,10 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_class'] = 'views-field views-field-block-title';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
   /* Field: Content: Client Image */
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['id'] = 'field_ca_testimonial_t_image';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['table'] = 'field_data_field_ca_testimonial_t_image';
@@ -357,6 +359,13 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '700',
   );
+  /* Field: Content: AddToAny link */
+  $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
+  $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
+  $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
+  $handler->display->display_options['fields']['addtoany_link']['label'] = '';
+  $handler->display->display_options['fields']['addtoany_link']['element_class'] = 'ca-addtoany-feature';
+  $handler->display->display_options['fields']['addtoany_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Global: Random */
   $handler->display->display_options['sorts']['random']['id'] = 'random';
