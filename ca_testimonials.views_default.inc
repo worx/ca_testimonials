@@ -142,7 +142,7 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['pane_title'] = 'CA Testimonials: List View Template One';
 
   /* Display: CA Testimonials: Admin */
-  $handler = $view->new_display('panel_pane', 'CA Testimonials: Admin', 'panel_pane_2');
+  $handler = $view->new_display('panel_pane', 'CA Testimonials: Admin', 'ca_testimonial_admin');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'full';
@@ -201,6 +201,13 @@ function ca_testimonials_views_default_views() {
       'override_label' => 0,
       'label' => '',
     ),
+    'action::views_bulk_operations_script_action' => array(
+      'selected' => 0,
+      'use_queue' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
     'action::node_make_sticky_action' => array(
       'selected' => 0,
       'use_queue' => 0,
@@ -214,6 +221,19 @@ function ca_testimonials_views_default_views() {
       'skip_confirmation' => 0,
       'override_label' => 0,
       'label' => '',
+    ),
+    'action::views_bulk_operations_modify_action' => array(
+      'selected' => 0,
+      'use_queue' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+      'settings' => array(
+        'show_all_tokens' => 1,
+        'display_values' => array(
+          '_all_' => '_all_',
+        ),
+      ),
     ),
     'action::views_bulk_operations_argument_selector_action' => array(
       'selected' => 0,
@@ -234,7 +254,7 @@ function ca_testimonials_views_default_views() {
     'action::node_publish_action' => array(
       'selected' => 1,
       'use_queue' => 0,
-      'skip_confirmation' => 0,
+      'skip_confirmation' => 1,
       'override_label' => 0,
       'label' => '',
     ),
@@ -280,6 +300,13 @@ function ca_testimonials_views_default_views() {
       'override_label' => 0,
       'label' => '',
     ),
+    'action::pathauto_node_update_action' => array(
+      'selected' => 0,
+      'use_queue' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -311,6 +338,7 @@ function ca_testimonials_views_default_views() {
     'ca_testimonial' => 'ca_testimonial',
   );
   $handler->display->display_options['pane_title'] = 'CA Testimonials: Admin';
+  $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: CA Testimonials: Block Template One */
   $handler = $view->new_display('block', 'CA Testimonials: Block Template One', 'ca_testimonial_block_1');
@@ -373,7 +401,7 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['sorts']['random']['field'] = 'random';
 
   /* Display: CA Testimonials: Node View */
-  $handler = $view->new_display('panel_pane', 'CA Testimonials: Node View', 'panel_pane_3');
+  $handler = $view->new_display('panel_pane', 'CA Testimonials: Node View', 'ca_testimonial_node_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
