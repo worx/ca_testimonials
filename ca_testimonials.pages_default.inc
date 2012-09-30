@@ -59,7 +59,7 @@ function ca_testimonials_default_page_manager_handlers() {
     $pane->pid = 'new-1';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_testimonial-panel_pane_3';
+    $pane->subtype = 'ca_testimonial-ca_testimonial_node_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -305,7 +305,7 @@ function ca_testimonials_default_page_manager_pages() {
     $pane->pid = 'new-1';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_testimonial-panel_pane_2';
+    $pane->subtype = 'ca_testimonial-ca_testimonial_admin';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
