@@ -67,6 +67,10 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '700',
   );
+  /* Sort criterion: Weight: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'weight_weights';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -126,7 +130,7 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '700',
   );
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -387,7 +391,7 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '700',
   );
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -454,6 +458,72 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['pane_title'] = 'CA Testimonials: Node View';
   $export['ca_testimonial'] = $view;
+
+  $view = new view();
+  $view->name = 'ca_testimonial_sort';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'CA Testimonial Sort';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Weight: Weight */
+  $handler->display->display_options['fields']['weight']['id'] = 'weight';
+  $handler->display->display_options['fields']['weight']['table'] = 'weight_weights';
+  $handler->display->display_options['fields']['weight']['field'] = 'weight';
+  $handler->display->display_options['fields']['weight']['element_label_colon'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'ca_testimonial' => 'ca_testimonial',
+  );
+
+  /* Display: CA Testimonial: Sort */
+  $handler = $view->new_display('panel_pane', 'CA Testimonial: Sort', 'ca_testimonial_sort');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['pane_title'] = 'CA Testimonial: Sort';
+  $export['ca_testimonial_sort'] = $view;
 
   return $export;
 }

@@ -14,7 +14,7 @@ function ca_testimonials_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_ca_testimonial';
-  $strongarm->value = 'edit-menu';
+  $strongarm->value = 'edit-weight-settings';
   $export['additional_settings__active_tab_ca_testimonial'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -116,6 +116,27 @@ function ca_testimonials_strongarm() {
   $strongarm->name = 'pathauto_node_ca_testimonial_pattern';
   $strongarm->value = 'testimonial/[node:title]';
   $export['pathauto_node_ca_testimonial_pattern'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'weight_default_ca_testimonial';
+  $strongarm->value = '0';
+  $export['weight_default_ca_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'weight_enabled_ca_testimonial';
+  $strongarm->value = '1';
+  $export['weight_enabled_ca_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'weight_range_ca_testimonial';
+  $strongarm->value = '50';
+  $export['weight_range_ca_testimonial'] = $strongarm;
 
   return $export;
 }

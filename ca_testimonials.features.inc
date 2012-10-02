@@ -16,6 +16,10 @@ function ca_testimonials_ctools_plugin_api() {
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
+  list($module, $api) = func_get_args();
+  if ($module == "weight" && $api == "weight") {
+    return array("version" => "1");
+  }
 }
 
 /**

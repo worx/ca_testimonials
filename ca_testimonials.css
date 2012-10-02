@@ -18,6 +18,8 @@
   text-align: right;
 }
 
+#testimonial-images { float: left; }
+
 #testimonial-images .views-field-field-ca-testimonial-t-image-1 a {
   padding: 0 5px 5px 0;
 }
