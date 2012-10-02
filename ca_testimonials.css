@@ -1,17 +1,10 @@
 .views-field-field-ca-testimonial-t-image {
   float: left;
-  padding-right: 30px;
+  padding-right: 15px;
 }
 
 .view-ca-testimonial .views-field-nothing {
   clear: both;
-}
-
-.view-display-id-ca_testimonial_list_1 .views-field-title {
-  margin: 0 0 0 230px;
-}
-.view-display-id-ca_testimonial_list_1 .views-field-field-ca-testimonial-t-image {
-    margin-top: -53px;
 }
 
 .pane-node-field-ca-testimonial-t-link {

@@ -95,15 +95,6 @@ function ca_testimonials_views_default_views() {
   $handler = $view->new_display('panel_pane', 'CA Testimonials: List View Template One', 'ca_testimonial_list_1');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Client Image */
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['id'] = 'field_ca_testimonial_t_image';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['table'] = 'field_data_field_ca_testimonial_t_image';
@@ -117,6 +108,15 @@ function ca_testimonials_views_default_views() {
   );
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_offset'] = '0';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
