@@ -15,8 +15,9 @@ function ca_testimonials_user_default_permissions() {
     'name' => 'create ca_testimonial content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'testimonials admin',
-      2 => 'webmaster',
+      1 => 'testimonial creator',
+      2 => 'testimonials admin',
+      3 => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -37,8 +38,9 @@ function ca_testimonials_user_default_permissions() {
     'name' => 'delete own ca_testimonial content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'testimonials admin',
-      2 => 'webmaster',
+      1 => 'testimonial creator',
+      2 => 'testimonials admin',
+      3 => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -59,8 +61,9 @@ function ca_testimonials_user_default_permissions() {
     'name' => 'edit own ca_testimonial content',
     'roles' => array(
       0 => 'administrator',
-      1 => 'testimonials admin',
-      2 => 'webmaster',
+      1 => 'testimonial creator',
+      2 => 'testimonials admin',
+      3 => 'webmaster',
     ),
     'module' => 'node',
   );

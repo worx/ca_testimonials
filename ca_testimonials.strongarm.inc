@@ -14,7 +14,7 @@ function ca_testimonials_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_ca_testimonial';
-  $strongarm->value = 'edit-weight-settings';
+  $strongarm->value = 'edit-xmlsitemap';
   $export['additional_settings__active_tab_ca_testimonial'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -137,6 +137,16 @@ function ca_testimonials_strongarm() {
   $strongarm->name = 'weight_range_ca_testimonial';
   $strongarm->value = '50';
   $export['weight_range_ca_testimonial'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'xmlsitemap_settings_node_ca_testimonial';
+  $strongarm->value = array(
+    'status' => '1',
+    'priority' => '0.6',
+  );
+  $export['xmlsitemap_settings_node_ca_testimonial'] = $strongarm;
 
   return $export;
 }
