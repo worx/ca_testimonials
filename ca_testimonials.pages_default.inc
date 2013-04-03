@@ -176,7 +176,7 @@ function ca_testimonials_default_page_manager_pages() {
           'rids' => array(
             0 => 3,
             1 => 4,
-            2 => 94896066,
+            2 => 192508511,
           ),
         ),
         'context' => 'logged-in-user',
@@ -274,7 +274,8 @@ function ca_testimonials_default_page_manager_pages() {
           'rids' => array(
             0 => 3,
             1 => 4,
-            2 => 5,
+            2 => 192508511,
+            3 => 39516467,
           ),
         ),
         'context' => 'logged-in-user',
@@ -341,7 +342,8 @@ function ca_testimonials_default_page_manager_pages() {
           'rids' => array(
             0 => 3,
             1 => 4,
-            2 => 5,
+            2 => 192508511,
+            3 => 39516467,
           ),
         ),
         'context' => 'logged-in-user',
@@ -378,13 +380,32 @@ function ca_testimonials_default_page_manager_pages() {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Admin',
+    'title' => 'CA Testimonials: Admin',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'role',
+          'settings' => array(
+            'rids' => array(
+              0 => 3,
+              1 => 4,
+              2 => 192508511,
+            ),
+          ),
+          'context' => 'logged-in-user',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -403,7 +424,7 @@ function ca_testimonials_default_page_manager_pages() {
     $pane->pid = 'new-2';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_testimonial-ca_testimonial_admin';
+    $pane->subtype = 'ca_testimonial_admin-ca_testimonial_admin';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -414,11 +435,78 @@ function ca_testimonials_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $pane->locks = '';
+    $pane->locks = array();
     $display->content['new-2'] = $pane;
     $display->panels['middle'][0] = 'new-2';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-2';
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_ca_testimonials_administration_panel_context_2';
+  $handler->task = 'page';
+  $handler->subtask = 'ca_testimonials_administration';
+  $handler->handler = 'panel_context';
+  $handler->weight = 1;
+  $handler->conf = array(
+    'title' => 'CA Testimonials: Creator Admin',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'role',
+          'settings' => array(
+            'rids' => array(
+              0 => 39516467,
+            ),
+          ),
+          'context' => 'logged-in-user',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'onecol';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = 'Administer';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_testimonial_admin-ca_testimonial_creator_admin';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-3'] = $pane;
+    $display->panels['middle'][0] = 'new-3';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
   $pages['ca_testimonials_administration'] = $page;
@@ -483,7 +571,7 @@ function ca_testimonials_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-3';
+    $pane->pid = 'new-4';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
     $pane->subtype = 'ca_testimonial-ca_testimonial_list_1';
@@ -498,8 +586,8 @@ function ca_testimonials_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-3'] = $pane;
-    $display->panels['middle'][0] = 'new-3';
+    $display->content['new-4'] = $pane;
+    $display->panels['middle'][0] = 'new-4';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
