@@ -5,17 +5,25 @@
  *
  * Perform actions to set up the site for this profile.
  */
-function ca_testimonials_install() {  
+function ca_testimonials_install() {
   // Update the imce roles profiles to set the Admin and writer role.
-	$imce_roles_profiles = variable_get('imce_roles_profiles');
+  $imce_roles_profiles = variable_get('imce_roles_profiles');
 	
   $imce_roles_profiles_vaule = array (
     'weight' => '-9',
     'public_pid' => 2,
     'private_pid' => 2,
-	);
+  );
 	
-	$imce_roles_profiles[94896066] = $imce_roles_profiles_vaule;
+  $imce_roles_profiles[192508511] = $imce_roles_profiles_vaule;
+	
+  $imce_roles_profiles_vaule = array (
+    'weight' => '-8',
+    'public_pid' => 3,
+    'private_pid' => 3,
+  );
+	
+  $imce_roles_profiles[39516467] = $imce_roles_profiles_vaule;
 	
   variable_set('imce_roles_profiles', $imce_roles_profiles);
 }
