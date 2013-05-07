@@ -1,18 +1,13 @@
-.views-field-field-ca-testimonial-t-image {
-  float: left;
-  padding-right: 15px;
-}
+/* List */
+.view-ca-testimonial-list .views-field-field-ca-testimonial-t-image {float: left; padding-right: 15px;}
 
-.view-ca-testimonial .views-field-nothing {
-  clear: both;
-}
+.view-ca-testimonial-list .views-field-nothing {clear: both;}
 
-.pane-node-field-ca-testimonial-t-link {
-  text-align: right;
-}
+/* Node */
+.pane-ca-testimonial-node-ca-testimonial-node-1a {float: left; padding: 0 15px 5px 0;}
 
-#testimonial-images { float: left; }
+.pane-ca-testimonial-node-ca-testimonial-node-1b {float: left; clear: left; padding: 0 15px 5px 0; width: 200px;}
 
-#testimonial-images .views-field-field-ca-testimonial-t-image-1 a {
-  padding: 0 5px 5px 0;
-}
+.pane-ca-testimonial-node-ca-testimonial-node-1b td {padding: 0;}
+
+.pane-ca-testimonial-node-ca-testimonial-node-client-link {padding-right: 10px; text-align: right;}

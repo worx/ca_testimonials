@@ -11,256 +11,6 @@ function ca_testimonials_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'ca_testimonial';
-  $view->description = '';
-  $view->tag = 'default';
-  $view->base_table = 'node';
-  $view->human_name = 'CA Testimonial';
-  $view->core = 7;
-  $view->api_version = '3.0';
-  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
-
-  /* Display: Master */
-  $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['use_more_always'] = FALSE;
-  $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'none';
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Client Image */
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['id'] = 'field_ca_testimonial_t_image';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['table'] = 'field_data_field_ca_testimonial_t_image';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
-    'image_style' => 'default',
-    'image_link' => 'content',
-  );
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_limit'] = '1';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_offset'] = '0';
-  /* Field: Content: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['alter']['max_length'] = '600';
-  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '700',
-  );
-  /* Sort criterion: Weight: Weight */
-  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
-  $handler->display->display_options['sorts']['weight']['table'] = 'weight_weights';
-  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 0;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Content: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'node';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'ca_testimonial' => 'ca_testimonial',
-  );
-
-  /* Display: CA Testimonials: List View Template One */
-  $handler = $view->new_display('panel_pane', 'CA Testimonials: List View Template One', 'ca_testimonial_list_1');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Client Image */
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['id'] = 'field_ca_testimonial_t_image';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['table'] = 'field_data_field_ca_testimonial_t_image';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
-    'image_style' => 'default',
-    'image_link' => 'content',
-  );
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_limit'] = '1';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_offset'] = '0';
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  /* Field: Content: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['alter']['max_length'] = '600';
-  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '700',
-  );
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
-  $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
-  $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
-  $handler->display->display_options['fields']['addtoany_link']['label'] = '';
-  $handler->display->display_options['fields']['addtoany_link']['element_class'] = 'ca-addtoany-feature';
-  $handler->display->display_options['fields']['addtoany_link']['element_label_colon'] = FALSE;
-  /* Field: Global: Custom text */
-  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['table'] = 'views';
-  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
-  $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
-  $handler->display->display_options['pane_title'] = 'CA Testimonials: List View Template One';
-
-  /* Display: CA Testimonials: Block Template One */
-  $handler = $view->new_display('block', 'CA Testimonials: Block Template One', 'ca_testimonial_block_1');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['title'] = 'Testimonials';
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
-  $handler->display->display_options['fields']['title']['element_class'] = 'views-field views-field-block-title';
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
-  /* Field: Content: Client Image */
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['id'] = 'field_ca_testimonial_t_image';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['table'] = 'field_data_field_ca_testimonial_t_image';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => 'content',
-  );
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_limit'] = '1';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_offset'] = '0';
-  /* Field: Content: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = '';
-  $handler->display->display_options['fields']['body']['alter']['max_length'] = '600';
-  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
-  $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
-  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '700',
-  );
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
-  $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
-  $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
-  $handler->display->display_options['fields']['addtoany_link']['label'] = '';
-  $handler->display->display_options['fields']['addtoany_link']['element_class'] = 'ca-addtoany-feature';
-  $handler->display->display_options['fields']['addtoany_link']['element_label_colon'] = FALSE;
-  $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sort criterion: Global: Random */
-  $handler->display->display_options['sorts']['random']['id'] = 'random';
-  $handler->display->display_options['sorts']['random']['table'] = 'views';
-  $handler->display->display_options['sorts']['random']['field'] = 'random';
-
-  /* Display: CA Testimonials: Node View */
-  $handler = $view->new_display('panel_pane', 'CA Testimonials: Node View', 'ca_testimonial_node_1');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'some';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Client Image */
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['id'] = 'field_ca_testimonial_t_image';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['table'] = 'field_data_field_ca_testimonial_t_image';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['type'] = 'colorbox';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
-    'colorbox_node_style' => 'default',
-    'colorbox_image_style' => '',
-    'colorbox_gallery' => 'page',
-    'colorbox_gallery_custom' => '',
-    'colorbox_caption' => 'auto',
-  );
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_limit'] = '1';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_offset'] = '0';
-  /* Field: Content: Client Image */
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image_1']['id'] = 'field_ca_testimonial_t_image_1';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image_1']['table'] = 'field_data_field_ca_testimonial_t_image';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image_1']['field'] = 'field_ca_testimonial_t_image';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image_1']['label'] = '';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image_1']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image_1']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image_1']['type'] = 'colorbox';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image_1']['settings'] = array(
-    'colorbox_node_style' => 'default_thumbnail',
-    'colorbox_image_style' => '',
-    'colorbox_gallery' => 'page',
-    'colorbox_gallery_custom' => '',
-    'colorbox_caption' => 'auto',
-  );
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image_1']['delta_offset'] = '1';
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image_1']['separator'] = '';
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Nid */
-  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['table'] = 'node';
-  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
-  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
-  $handler->display->display_options['pane_title'] = 'CA Testimonials: Node View';
-  $export['ca_testimonial'] = $view;
-
-  $view = new view();
   $view->name = 'ca_testimonial_admin';
   $view->description = '';
   $view->tag = 'default';
@@ -537,6 +287,8 @@ function ca_testimonials_views_default_views() {
     'ca_testimonial' => 'ca_testimonial',
   );
   $handler->display->display_options['pane_title'] = 'CA Testimonials: Admin';
+  $handler->display->display_options['pane_category']['name'] = 'CA Admin';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: CA Testimonials: Creator Admin */
@@ -745,8 +497,449 @@ function ca_testimonials_views_default_views() {
     'ca_testimonial' => 'ca_testimonial',
   );
   $handler->display->display_options['pane_title'] = 'CA Testimonials: Creator Admin';
+  $handler->display->display_options['pane_category']['name'] = 'CA Admin';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $handler->display->display_options['inherit_panels_path'] = '1';
   $export['ca_testimonial_admin'] = $view;
+
+  $view = new view();
+  $view->name = 'ca_testimonial_block';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'CA Testimonial Block';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Client Image */
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['id'] = 'field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['table'] = 'field_data_field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
+    'image_style' => 'default',
+    'image_link' => 'content',
+  );
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_offset'] = '0';
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '600';
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '700',
+  );
+  /* Sort criterion: Weight: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'weight_weights';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'ca_testimonial' => 'ca_testimonial',
+  );
+
+  /* Display: CA Testimonials: Block Template One */
+  $handler = $view->new_display('block', 'CA Testimonials: Block Template One', 'ca_testimonial_block_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Testimonials';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['title']['element_class'] = 'views-field views-field-block-title';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = FALSE;
+  /* Field: Content: Client Image */
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['id'] = 'field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['table'] = 'field_data_field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
+    'image_style' => 'thumbnail',
+    'image_link' => 'content',
+  );
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_offset'] = '0';
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '600';
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '700',
+  );
+  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
+  $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
+  $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
+  $handler->display->display_options['fields']['addtoany_link']['label'] = '';
+  $handler->display->display_options['fields']['addtoany_link']['element_class'] = 'ca-addtoany-feature';
+  $handler->display->display_options['fields']['addtoany_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Global: Random */
+  $handler->display->display_options['sorts']['random']['id'] = 'random';
+  $handler->display->display_options['sorts']['random']['table'] = 'views';
+  $handler->display->display_options['sorts']['random']['field'] = 'random';
+  $export['ca_testimonial_block'] = $view;
+
+  $view = new view();
+  $view->name = 'ca_testimonial_list';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'CA Testimonial List';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '5';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Client Image */
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['id'] = 'field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['table'] = 'field_data_field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
+    'image_style' => 'default',
+    'image_link' => 'content',
+  );
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_offset'] = '0';
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '600';
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '700',
+  );
+  /* Sort criterion: Weight: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'weight_weights';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'ca_testimonial' => 'ca_testimonial',
+  );
+
+  /* Display: CA Testimonials: List View Template One */
+  $handler = $view->new_display('panel_pane', 'CA Testimonials: List View Template One', 'ca_testimonial_list_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Client Image */
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['id'] = 'field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['table'] = 'field_data_field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
+    'image_style' => 'default',
+    'image_link' => 'content',
+  );
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_offset'] = '0';
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h2';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['alter']['max_length'] = '600';
+  $handler->display->display_options['fields']['body']['alter']['trim'] = TRUE;
+  $handler->display->display_options['fields']['body']['alter']['html'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '700',
+  );
+  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
+  $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
+  $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
+  $handler->display->display_options['fields']['addtoany_link']['label'] = '';
+  $handler->display->display_options['fields']['addtoany_link']['element_class'] = 'ca-addtoany-feature';
+  $handler->display->display_options['fields']['addtoany_link']['element_label_colon'] = FALSE;
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['pane_title'] = 'CA Testimonials: List View Template One';
+  $handler->display->display_options['pane_category']['name'] = 'CA List';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $export['ca_testimonial_list'] = $view;
+
+  $view = new view();
+  $view->name = 'ca_testimonial_node';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'CA Testimonial Node';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '1';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['row_plugin'] = 'fields';
+  /* Field: Content: Client Image */
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['id'] = 'field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['table'] = 'field_data_field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['type'] = 'colorbox';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
+    'colorbox_node_style' => 'default',
+    'colorbox_image_style' => '',
+    'colorbox_gallery' => 'page',
+    'colorbox_gallery_custom' => '',
+    'colorbox_caption' => 'auto',
+    'colorbox_caption_custom' => '',
+  );
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_offset'] = '0';
+  /* Sort criterion: Weight: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'weight_weights';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 0;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'ca_testimonial' => 'ca_testimonial',
+  );
+
+  /* Display: CA Testimonials: Node View Template 1 A */
+  $handler = $view->new_display('panel_pane', 'CA Testimonials: Node View Template 1 A', 'ca_testimonial_node_1a');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['pane_title'] = 'CA Testimonials: Node View Template 1 A';
+  $handler->display->display_options['pane_category']['name'] = 'CA Node';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+
+  /* Display: CA Testimonials: Node View Template 1 B */
+  $handler = $view->new_display('panel_pane', 'CA Testimonials: Node View Template 1 B', 'ca_testimonial_node_1b');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'mini';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '4';
+  $handler->display->display_options['pager']['options']['offset'] = '1';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'grid';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Client Image */
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['id'] = 'field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['table'] = 'field_data_field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['type'] = 'colorbox';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
+    'colorbox_node_style' => 'default_thumbnail',
+    'colorbox_image_style' => '',
+    'colorbox_gallery' => 'page',
+    'colorbox_gallery_custom' => '',
+    'colorbox_caption' => 'auto',
+    'colorbox_caption_custom' => '',
+  );
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_limit'] = '1';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['pane_title'] = 'CA Testimonials: Node View Template 1 B';
+  $handler->display->display_options['pane_category']['name'] = 'CA Node';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+
+  /* Display: CA Testimonials: Node Client Link */
+  $handler = $view->new_display('panel_pane', 'CA Testimonials: Node Client Link', 'ca_testimonial_node_client_link');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Client Link */
+  $handler->display->display_options['fields']['field_ca_testimonial_t_link']['id'] = 'field_ca_testimonial_t_link';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_link']['table'] = 'field_data_field_ca_testimonial_t_link';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_link']['field'] = 'field_ca_testimonial_t_link';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_link']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_link']['element_type'] = 'h3';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_link']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['pane_title'] = 'CA Testimonials: Node Client Link';
+  $handler->display->display_options['pane_category']['name'] = 'CA Node';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $export['ca_testimonial_node'] = $view;
 
   $view = new view();
   $view->name = 'ca_testimonial_sort';
@@ -793,6 +986,14 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['weight']['table'] = 'weight_weights';
   $handler->display->display_options['fields']['weight']['field'] = 'weight';
   $handler->display->display_options['fields']['weight']['element_label_colon'] = FALSE;
+  /* Sort criterion: Weight: Weight */
+  $handler->display->display_options['sorts']['weight']['id'] = 'weight';
+  $handler->display->display_options['sorts']['weight']['table'] = 'weight_weights';
+  $handler->display->display_options['sorts']['weight']['field'] = 'weight';
+  /* Sort criterion: Content: Post date */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -812,6 +1013,8 @@ function ca_testimonials_views_default_views() {
   $handler = $view->new_display('panel_pane', 'CA Testimonial: Sort', 'ca_testimonial_sort');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['pane_title'] = 'CA Testimonial: Sort';
+  $handler->display->display_options['pane_category']['name'] = 'CA Sort';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $export['ca_testimonial_sort'] = $view;
 
   return $export;
