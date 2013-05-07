@@ -14,7 +14,7 @@ function ca_testimonials_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_ca_testimonial';
-  $strongarm->value = 'edit-xmlsitemap';
+  $strongarm->value = 'edit-weight-settings';
   $export['additional_settings__active_tab_ca_testimonial'] = $strongarm;
 
   $strongarm = new stdClass();

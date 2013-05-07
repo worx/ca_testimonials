@@ -59,7 +59,7 @@ function ca_testimonials_default_page_manager_handlers() {
     $pane->pid = 'new-1';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_testimonial-ca_testimonial_node_1';
+    $pane->subtype = 'ca_testimonial_node-ca_testimonial_node_1a';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -67,17 +67,32 @@ function ca_testimonials_default_page_manager_handlers() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => 'testimonial-images',
-      'css_class' => '',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
-    $pane->locks = '';
+    $pane->locks = array();
     $display->content['new-1'] = $pane;
     $display->panels['middle'][0] = 'new-1';
     $pane = new stdClass();
     $pane->pid = 'new-2';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_testimonial_node-ca_testimonial_node_1b';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $display->content['new-2'] = $pane;
+    $display->panels['middle'][1] = 'new-2';
+    $pane = new stdClass();
+    $pane->pid = 'new-3';
     $pane->panel = 'middle';
     $pane->type = 'node_body';
     $pane->subtype = 'node_body';
@@ -94,38 +109,30 @@ function ca_testimonials_default_page_manager_handlers() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = '';
-    $display->content['new-2'] = $pane;
-    $display->panels['middle'][1] = 'new-2';
-    $pane = new stdClass();
-    $pane->pid = 'new-3';
-    $pane->panel = 'middle';
-    $pane->type = 'entity_field';
-    $pane->subtype = 'node:field_ca_testimonial_t_link';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array(
-      'label' => 'hidden',
-      'formatter' => 'link_default',
-      'formatter_settings' => array(),
-      'view_mode' => 'ctools_custom',
-      'context' => 'argument_entity_id:node_1',
-      'override_title' => 1,
-      'override_title_text' => '<none>',
-    );
-    $pane->cache = array();
-    $pane->style = array(
-      'settings' => NULL,
-    );
-    $pane->css = array();
-    $pane->extras = array();
     $pane->position = 2;
     $pane->locks = '';
     $display->content['new-3'] = $pane;
     $display->panels['middle'][2] = 'new-3';
     $pane = new stdClass();
     $pane->pid = 'new-4';
+    $pane->panel = 'middle';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'ca_testimonial_node-ca_testimonial_node_client_link';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $display->content['new-4'] = $pane;
+    $display->panels['middle'][3] = 'new-4';
+    $pane = new stdClass();
+    $pane->pid = 'new-5';
     $pane->panel = 'middle';
     $pane->type = 'block';
     $pane->subtype = 'addtoany-addtoany_button';
@@ -144,12 +151,12 @@ function ca_testimonials_default_page_manager_handlers() {
       'css_class' => 'ca-addtoany-feature',
     );
     $pane->extras = array();
-    $pane->position = 3;
+    $pane->position = 4;
     $pane->locks = array();
-    $display->content['new-4'] = $pane;
-    $display->panels['middle'][3] = 'new-4';
+    $display->content['new-5'] = $pane;
+    $display->panels['middle'][4] = 'new-5';
   $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-1';
+  $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $export['ca_testimonial_node_view_panel_context'] = $handler;
 
@@ -574,7 +581,7 @@ function ca_testimonials_default_page_manager_pages() {
     $pane->pid = 'new-4';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'ca_testimonial-ca_testimonial_list_1';
+    $pane->subtype = 'ca_testimonial_list-ca_testimonial_list_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
