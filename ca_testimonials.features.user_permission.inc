@@ -14,7 +14,7 @@ function ca_testimonials_user_default_permissions() {
   $permissions['create ca_testimonial content'] = array(
     'name' => 'create ca_testimonial content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'testimonials admin' => 'testimonials admin',
       'testimonial creator' => 'testimonial creator',
       'webmaster' => 'webmaster',
@@ -26,7 +26,7 @@ function ca_testimonials_user_default_permissions() {
   $permissions['delete any ca_testimonial content'] = array(
     'name' => 'delete any ca_testimonial content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'testimonials admin' => 'testimonials admin',
       'webmaster' => 'webmaster',
     ),
@@ -37,7 +37,7 @@ function ca_testimonials_user_default_permissions() {
   $permissions['delete own ca_testimonial content'] = array(
     'name' => 'delete own ca_testimonial content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'testimonials admin' => 'testimonials admin',
       'testimonial creator' => 'testimonial creator',
       'webmaster' => 'webmaster',
@@ -49,7 +49,7 @@ function ca_testimonials_user_default_permissions() {
   $permissions['edit any ca_testimonial content'] = array(
     'name' => 'edit any ca_testimonial content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'testimonials admin' => 'testimonials admin',
       'webmaster' => 'webmaster',
     ),
@@ -60,7 +60,7 @@ function ca_testimonials_user_default_permissions() {
   $permissions['edit own ca_testimonial content'] = array(
     'name' => 'edit own ca_testimonial content',
     'roles' => array(
-      'administrator => 'administrator',
+      'administrator' => 'administrator',
       'testimonials admin' => 'testimonials admin',
       'testimonial creator' => 'testimonial creator',
       'webmaster' => 'webmaster',
