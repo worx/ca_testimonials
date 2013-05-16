@@ -14,10 +14,10 @@ function ca_testimonials_user_default_permissions() {
   $permissions['create ca_testimonial content'] = array(
     'name' => 'create ca_testimonial content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'testimonial creator',
-      2 => 'testimonials admin',
-      3 => 'webmaster',
+      'administrator => 'administrator',
+      'testimonials admin' => 'testimonials admin',
+      'testimonial creator' => 'testimonial creator',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -26,9 +26,9 @@ function ca_testimonials_user_default_permissions() {
   $permissions['delete any ca_testimonial content'] = array(
     'name' => 'delete any ca_testimonial content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'testimonials admin',
-      2 => 'webmaster',
+      'administrator => 'administrator',
+      'testimonials admin' => 'testimonials admin',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -37,10 +37,10 @@ function ca_testimonials_user_default_permissions() {
   $permissions['delete own ca_testimonial content'] = array(
     'name' => 'delete own ca_testimonial content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'testimonial creator',
-      2 => 'testimonials admin',
-      3 => 'webmaster',
+      'administrator => 'administrator',
+      'testimonials admin' => 'testimonials admin',
+      'testimonial creator' => 'testimonial creator',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -49,9 +49,9 @@ function ca_testimonials_user_default_permissions() {
   $permissions['edit any ca_testimonial content'] = array(
     'name' => 'edit any ca_testimonial content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'testimonials admin',
-      2 => 'webmaster',
+      'administrator => 'administrator',
+      'testimonials admin' => 'testimonials admin',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'node',
   );
@@ -60,10 +60,10 @@ function ca_testimonials_user_default_permissions() {
   $permissions['edit own ca_testimonial content'] = array(
     'name' => 'edit own ca_testimonial content',
     'roles' => array(
-      0 => 'administrator',
-      1 => 'testimonial creator',
-      2 => 'testimonials admin',
-      3 => 'webmaster',
+      'administrator => 'administrator',
+      'testimonials admin' => 'testimonials admin',
+      'testimonial creator' => 'testimonial creator',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'node',
   );
