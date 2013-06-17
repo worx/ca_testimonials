@@ -45,8 +45,10 @@ function ca_testimonials_menu_alter(&$items) {
  * Implements hook_panels_pre_render().
  */
 function ca_testimonials_panels_pre_render($panel, $renderer) {
-  if (isset($panel->content['new-5']) && $panel->content['new-5']->subtype == 'ca_testimonial-ca_testimonial_list_1') {
-    $panel->title = variable_get('ca_testimonials_panel_title', 'Testimonials');
+  foreach ($panel->content as $key => $value) {
+    if ($value->subtype == 'ca_testimonial_list-ca_testimonial_list_1') {
+      $panel->title = variable_get('ca_testimonials_panel_title', 'Testimonials');
+    }
   }
 }
 

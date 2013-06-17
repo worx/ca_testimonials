@@ -574,7 +574,7 @@ function ca_testimonials_default_page_manager_pages() {
     ),
   );
   $display->cache = array();
-  $display->title = 'Testimonials';
+  $display->title = '';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
