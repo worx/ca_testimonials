@@ -41,6 +41,8 @@ function ca_testimonials_default_page_manager_handlers() {
       ),
       'logic' => 'and',
     ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-testimonial-node ca-testimonial-node-template-1',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -222,7 +224,7 @@ function ca_testimonials_default_page_manager_pages() {
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'ca-admin ca-testimonial-admin',
     'css_id' => '',
     'css' => '',
     'contexts' => array(),
@@ -412,7 +414,7 @@ function ca_testimonials_default_page_manager_pages() {
       'logic' => 'and',
     ),
     'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
+    'body_classes_to_add' => 'ca-admin ca-testimonial-admin',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -480,6 +482,8 @@ function ca_testimonials_default_page_manager_pages() {
       ),
       'logic' => 'and',
     ),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-admin ca-testimonial-admin',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
@@ -563,6 +567,8 @@ function ca_testimonials_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => 'ca-testimonials-list ca-testimonials-list-template-1',
   );
   $display = new panels_display();
   $display->layout = 'onecol';
