@@ -583,8 +583,8 @@ function ca_testimonials_views_default_views() {
     'ca_testimonial' => 'ca_testimonial',
   );
 
-  /* Display: CA Testimonials: Block Template One */
-  $handler = $view->new_display('block', 'CA Testimonials: Block Template One', 'ca_testimonial_block_1');
+  /* Display: CA Testimonials: Testimonials Block Template One */
+  $handler = $view->new_display('block', 'CA Testimonials: Testimonials Block Template One', 'ca_testimonial_block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Testimonials';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
@@ -642,6 +642,7 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['sorts']['random']['id'] = 'random';
   $handler->display->display_options['sorts']['random']['table'] = 'views';
   $handler->display->display_options['sorts']['random']['field'] = 'random';
+  $handler->display->display_options['block_description'] = 'CA Testimonials: Testimonials Block Template One';
   $export['ca_testimonial_block'] = $view;
 
   $view = new view();
