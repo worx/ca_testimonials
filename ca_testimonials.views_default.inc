@@ -47,6 +47,8 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
     'image_style' => 'default',
@@ -539,6 +541,8 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
     'image_style' => 'default',
@@ -610,6 +614,8 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
     'image_style' => 'thumbnail',
@@ -682,6 +688,8 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
     'image_style' => 'default',
@@ -736,6 +744,8 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
     'image_style' => 'default',
@@ -812,6 +822,8 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['type'] = 'colorbox';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
@@ -887,6 +899,8 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['type'] = 'colorbox';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
