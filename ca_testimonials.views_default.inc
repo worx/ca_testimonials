@@ -541,8 +541,6 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
     'image_style' => 'default',
@@ -587,8 +585,8 @@ function ca_testimonials_views_default_views() {
     'ca_testimonial' => 'ca_testimonial',
   );
 
-  /* Display: CA Testimonials: Testimonials Block Template One */
-  $handler = $view->new_display('block', 'CA Testimonials: Testimonials Block Template One', 'ca_testimonial_block_1');
+  /* Display: CA Testimonials: Block Template One */
+  $handler = $view->new_display('block', 'CA Testimonials: Block Template One', 'ca_testimonial_block_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Testimonials';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
@@ -614,8 +612,6 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['field'] = 'field_ca_testimonial_t_image';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['label'] = '';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['hide_empty'] = TRUE;
-  $handler->display->display_options['fields']['field_ca_testimonial_t_image']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['settings'] = array(
     'image_style' => 'thumbnail',
@@ -648,7 +644,7 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['sorts']['random']['id'] = 'random';
   $handler->display->display_options['sorts']['random']['table'] = 'views';
   $handler->display->display_options['sorts']['random']['field'] = 'random';
-  $handler->display->display_options['block_description'] = 'CA Testimonials: Testimonials Block Template One';
+  $handler->display->display_options['block_description'] = 'CA Testimonials: Block Template One';
   $export['ca_testimonial_block'] = $view;
 
   $view = new view();
@@ -1036,6 +1032,7 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['pane_title'] = 'CA Testimonial: Sort';
   $handler->display->display_options['pane_category']['name'] = 'CA Sort';
   $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['inherit_panels_path'] = '1';
   $export['ca_testimonial_sort'] = $view;
 
   return $export;
