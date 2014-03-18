@@ -1,0 +1,93 @@
+.view-ca-testimonial-list .views-field-field-ca-testimonial-t-image {
+  float: none;
+  padding: 0;
+  text-align: center;
+}
+
+.view-ca-testimonial-list .views-field-field-ca-testimonial-t-image img {
+  padding: 0 0 5px 0;
+}
+
+.pane-ca-testimonial-node-ca-testimonial-node-1a {
+  float: none;
+  text-align: center;
+}
+
+.pane-ca-testimonial-node-ca-testimonial-node-1a .views-field-field-ca-testimonial-t-imag {
+  padding: 0 0 5px;
+}
+
+
+.pane-ca-testimonial-node-ca-testimonial-node-1b {
+  float: none;
+  clear: left;
+  padding: 0 0 5px;
+  text-align: center;
+  width: auto;
+}
+
+.node-type-ca-testimonial .pane-ca-testimonial-node-ca-testimonial-node-1a {
+  float: none;
+  margin: 0;
+  text-align: center;
+}
+
+.pane-ca-testimonial-node-ca-testimonial-node-1a .block-inner {
+  margin: 0 10px;
+}
+
+.node-type-ca-testimonial .pane-ca-testimonial-node-ca-testimonial-node-1b {
+  float: none;
+  margin: 0;
+  width: auto;
+}
+
+.pane-ca-testimonial-node-ca-testimonial-node-1b table {
+  margin: 0;
+}
+
+.pane-ca-testimonial-node-ca-testimonial-node-1b td {
+  padding: 0;
+  text-align: center;
+}
+
+@media only screen and (min-width:481px) {
+  .view-ca-testimonial-list .views-field-field-ca-testimonial-t-image {
+    float: left;
+  }
+
+  .view-ca-testimonial-list .views-field-field-ca-testimonial-t-image img {
+    padding: 0 15px 5px 0;
+  }
+
+  .pane-ca-testimonial-node-ca-testimonial-node-1a {
+    float: left;
+  }
+
+  .pane-ca-testimonial-node-ca-testimonial-node-1a .views-field-field-ca-testimonial-t-image {
+    padding: 0 15px 5px 0;
+  }
+
+  .node-type-ca-testimonial .pane-ca-testimonial-node-ca-testimonial-node-1a {
+    float: left;
+    margin-left: 10px;
+  }
+  
+  .node-type-ca-testimonial .pane-ca-testimonial-node-ca-testimonial-node-1a .views-field-field-ca-testimonial-image {
+    margin: 0 15px 5px 10px;
+  }
+
+  .pane-ca-testimonial-node-ca-testimonial-node-1a .block-inner {
+    margin: 0;
+  }
+  
+  .node-type-ca-testimonial .pane-ca-testimonial-node-ca-testimonial-node-1b {
+    float: left;
+    margin: 0 15px 5px 10px;
+    width: 200px;
+  }
+
+  .pane-ca-testimonial-node-ca-testimonial-node-1b .block-inner {
+    margin: 0;
+  }
+}
