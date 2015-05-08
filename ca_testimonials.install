@@ -33,7 +33,7 @@ function ca_testimonials_install() {
   // Added the permission assign node weights for Testimonials Admin.
   user_role_change_permissions(192508511, 
     array(
-      'assign node weights' => TRUE,
+      'assign node weight' => TRUE,
     )
   );
 }
