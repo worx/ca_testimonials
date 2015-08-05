@@ -40,7 +40,7 @@ function ca_testimonials_install() {
 
 /**
  * Setting worx_aurora_base_enable default so that panels can work corretly when aura base feature is not enabled.
- * Set theassign node weights for Blog Admin
+ * Added the permission assign node weights for Testimonials Admin.
  */
 function ca_testimonials_update_7000() {
   // Get the worx_aurora_base_enable variable to default set if not already set.
