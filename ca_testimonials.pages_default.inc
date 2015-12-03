@@ -1082,6 +1082,18 @@ function ca_testimonials_default_page_manager_pages() {
     'relationships' => array(),
     'body_classes_to_remove' => '',
     'body_classes_to_add' => 'ca-testimonials-list ca-testimonials-list-template-1',
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display();
   $display->layout = 'worx_aurora';
