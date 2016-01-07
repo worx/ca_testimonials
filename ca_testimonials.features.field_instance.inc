@@ -10,7 +10,7 @@
 function ca_testimonials_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ca_testimonial-body'
+  // Exported field_instance: 'node-ca_testimonial-body'.
   $field_instances['node-ca_testimonial-body'] = array(
     'bundle' => 'ca_testimonial',
     'default_value' => NULL,
@@ -56,7 +56,8 @@ function ca_testimonials_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ca_testimonial-field_ca_testimonial_t_image'
+  // Exported field_instance:
+  // 'node-ca_testimonial-field_ca_testimonial_t_image'.
   $field_instances['node-ca_testimonial-field_ca_testimonial_t_image'] = array(
     'bundle' => 'ca_testimonial',
     'deleted' => 0,
@@ -98,7 +99,21 @@ function ca_testimonials_field_default_field_instances() {
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'preview_image_style' => 'thumbnail',
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 1,
+        'manualcrop_inline_crop' => 0,
+        'manualcrop_instant_crop' => 0,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 1,
+        'manualcrop_require_cropping' => array(),
+        'manualcrop_styles_list' => array(
+          'crop_default_landscape' => 'crop_default_landscape',
+        ),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => 0,
+        'preview_image_style' => 'crop_default_landscape_preview',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
@@ -106,7 +121,7 @@ function ca_testimonials_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ca_testimonial-field_ca_testimonial_t_link'
+  // Exported field_instance: 'node-ca_testimonial-field_ca_testimonial_t_link'.
   $field_instances['node-ca_testimonial-field_ca_testimonial_t_link'] = array(
     'bundle' => 'ca_testimonial',
     'default_value' => NULL,
