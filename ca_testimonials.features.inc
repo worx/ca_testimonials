@@ -54,7 +54,7 @@ function ca_testimonials_weight_features_default_settings() {
     'enabled' => 1,
     'range' => 100,
     'menu_weight' => 0,
-    'default' => 0,
+    'default' => -100,
     'sync_translations' => 0,
   );
 
