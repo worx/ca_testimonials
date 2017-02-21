@@ -36,6 +36,20 @@ function ca_testimonials_install() {
       'assign node weight' => TRUE,
     )
   );
+
+  // Set the permissions for Administrator
+  user_role_change_permissions(3, 
+    array(
+      'assign node weight' => TRUE,
+    )
+  );
+
+  // Set the permissions for Webmaster
+  user_role_change_permissions(4, 
+    array(
+      'assign node weight' => TRUE,
+    )
+  );
 }
 
 /**
@@ -54,3 +68,21 @@ function ca_testimonials_update_7000() {
   );
 }
 
+/**
+ * Added the permission assign node weights for Webmaster and Administrator.
+ */
+function ca_testimonials_update_7001() {
+  // Set the permissions for Administrator
+  user_role_change_permissions(3, 
+    array(
+      'assign node weight' => TRUE,
+    )
+  );
+
+  // Set the permissions for Webmaster
+  user_role_change_permissions(4, 
+    array(
+      'assign node weight' => TRUE,
+    )
+  );
+}
