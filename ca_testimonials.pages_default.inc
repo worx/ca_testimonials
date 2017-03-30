@@ -56,8 +56,8 @@ function ca_testimonials_default_page_manager_handlers() {
   $display->cache = array();
   $display->title = '%node:title';
   $display->uuid = '629aaee9-e7b1-4bc5-a418-b4f53608c2dc';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'ca_testimonial_node_view_panel_context';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -216,8 +216,8 @@ function ca_testimonials_default_page_manager_handlers() {
   $display->cache = array();
   $display->title = '%node:title';
   $display->uuid = '629aaee9-e7b1-4bc5-a418-b4f53608c2dc';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'node_view__panel_context_9346b4f2-eb98-4a85-9faf-485bdac80bec';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -410,8 +410,8 @@ function ca_testimonials_default_page_manager_pages() {
   $display->cache = array();
   $display->title = 'Testimonial Sort';
   $display->uuid = '188215c1-9ca9-4b14-875b-c0a53c2b8d5c';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_ca_testimonial_sort_panel_context';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -600,8 +600,8 @@ function ca_testimonials_default_page_manager_pages() {
   $display->cache = array();
   $display->title = 'Administer';
   $display->uuid = '7e92911c-16dd-4464-967a-f9d5e250cc10';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_ca_testimonials_administration_panel_context';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -673,8 +673,8 @@ function ca_testimonials_default_page_manager_pages() {
   $display->cache = array();
   $display->title = 'Administer';
   $display->uuid = 'a97de17b-7d90-4602-b67c-eb93ea3d2772';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_ca_testimonials_administration_panel_context_2';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -774,8 +774,8 @@ function ca_testimonials_default_page_manager_pages() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = '3ad6dc39-52f1-47a9-a87f-11782cd433da';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_ca_testimonials_list_view__panel_context_ca5650fe-39ab-4fd7-ac0d-89f4b9c55a91';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
@@ -832,8 +832,8 @@ function ca_testimonials_default_page_manager_pages() {
   $display->cache = array();
   $display->title = '';
   $display->uuid = '3ad6dc39-52f1-47a9-a87f-11782cd433da';
-  $display->storage_type = '';
-  $display->storage_id = '';
+  $display->storage_type = 'page_manager';
+  $display->storage_id = 'page_ca_testimonials_list_view_panel_context';
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
