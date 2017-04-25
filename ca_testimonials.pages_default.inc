@@ -198,6 +198,13 @@ function ca_testimonials_default_page_manager_handlers() {
           'context' => 'argument_entity_id:node_1',
           'not' => FALSE,
         ),
+        1 => array(
+          'name' => 'worx_aurora_base_settings',
+          'settings' => array(
+            'worx_aurora_base_enable' => 'worx_aurora_base_enabled',
+          ),
+          'not' => FALSE,
+        ),
       ),
       'logic' => 'and',
     ),
