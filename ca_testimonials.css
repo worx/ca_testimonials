@@ -10,9 +10,9 @@
 /* Node */
 .pane-ca-testimonial-node-ca-testimonial-node-1a {float: left;}
 
-.pane-ca-testimonial-node-ca-testimonial-node-1b {float: left; clear: left; padding: 0 15px 5px 0; width: 200px;}
+.pane-ca-testimonial-node-ca-testimonial-node-1b {float: left; clear: left; margin: 0 15px 5px 0; width: 200px;}
 
-.pane-ca-testimonial-node-ca-testimonial-node-1b td {padding: 0;}
+.pane-ca-testimonial-node-ca-testimonial-node-1b td {padding: 0; text-align: center;}
 
 .pane-ca-testimonial-node-ca-testimonial-node-1a .views-field-field-ca-testimonial-t-image { padding: 0 15px 5px 0;}
 
