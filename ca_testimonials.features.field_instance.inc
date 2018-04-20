@@ -97,7 +97,7 @@ function ca_testimonials_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'multiupload_imagefield_widget',
       'settings' => array(
         'manualcrop_crop_info' => 1,
         'manualcrop_default_crop_area' => 1,
@@ -116,7 +116,7 @@ function ca_testimonials_field_default_field_instances() {
         'preview_image_style' => 'crop_default_landscape_preview',
         'progress_indicator' => 'throbber',
       ),
-      'type' => 'image_image',
+      'type' => 'image_miw',
       'weight' => 1,
     ),
   );
