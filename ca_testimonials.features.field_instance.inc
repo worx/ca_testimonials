@@ -176,11 +176,92 @@ function ca_testimonials_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-ca_testimonial-field_ca_testimonial_t_vid'.
+  $field_instances['node-ca_testimonial-field_ca_testimonial_t_vid'] = array(
+    'bundle' => 'ca_testimonial',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'mediafield',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'media',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ca_testimonial_t_vid',
+    'label' => 'Video Testimonial',
+    'required' => 0,
+    'settings' => array(
+      'file_extensions' => 'jpg jpeg gif png txt doc docx xls xlsx pdf ppt pptx pps ppsx odt ods odp mp3 mov mp4 m4a m4v mpeg avi ogg oga ogv wmv ico',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 0,
+          'public' => 0,
+          'vimeo' => 0,
+          'youtube' => 'youtube',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 0,
+          'video' => 'video',
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 'media_internet',
+          'upload' => 0,
+          'youtube' => 'youtube',
+        ),
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 0,
+        'manualcrop_inline_crop' => FALSE,
+        'manualcrop_instant_crop' => FALSE,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => TRUE,
+        'manualcrop_maximize_default_crop_area' => FALSE,
+        'manualcrop_require_cropping' => array(
+          '1000x312' => 0,
+          'portfolio_medium' => 0,
+          'slideshow_image' => 0,
+        ),
+        'manualcrop_styles_list' => array(
+          '1000x312' => 0,
+          'portfolio_medium' => 0,
+          'slideshow_image' => 0,
+        ),
+        'manualcrop_styles_mode' => 'exclude',
+        'manualcrop_thumblist' => 0,
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 3,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
   t('Client Image');
   t('Client Link');
+  t('Video Testimonial');
 
   return $field_instances;
 }

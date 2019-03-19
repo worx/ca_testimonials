@@ -61,5 +61,24 @@ function ca_testimonials_field_default_field_bases() {
     'type' => 'link_field',
   );
 
+  // Exported field_base: 'field_ca_testimonial_t_vid'.
+  $field_bases['field_ca_testimonial_t_vid'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_ca_testimonial_t_vid',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'mediafield',
+    'settings' => array(),
+    'translatable' => 0,
+    'type' => 'media',
+  );
+
   return $field_bases;
 }
