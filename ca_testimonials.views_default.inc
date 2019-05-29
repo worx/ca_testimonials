@@ -422,7 +422,7 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -567,7 +567,7 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '600',
   );
-  /* Field: Content: AddToAny link */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['addtoany_link']['id'] = 'addtoany_link';
   $handler->display->display_options['fields']['addtoany_link']['table'] = 'node';
   $handler->display->display_options['fields']['addtoany_link']['field'] = 'addtoany_link';
@@ -651,6 +651,15 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Contextual filter: Content: Nid */
+  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   /* Filter criterion: Content: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -669,16 +678,6 @@ function ca_testimonials_views_default_views() {
   /* Display: CA Testimonials: Node View Template 1 A */
   $handler = $view->new_display('panel_pane', 'CA Testimonials: Node View Template 1 A', 'ca_testimonial_node_1a');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Nid */
-  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['table'] = 'node';
-  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
-  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['pane_title'] = 'CA Testimonials: Node View Template 1 A';
   $handler->display->display_options['pane_category']['name'] = 'CA Node';
   $handler->display->display_options['pane_category']['weight'] = '0';
@@ -720,16 +719,6 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_limit'] = '1';
   $handler->display->display_options['fields']['field_ca_testimonial_t_image']['delta_offset'] = '0';
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Nid */
-  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['table'] = 'node';
-  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
-  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['pane_title'] = 'CA Testimonials: Node View Template 1 B';
   $handler->display->display_options['pane_category']['name'] = 'CA Node';
   $handler->display->display_options['pane_category']['weight'] = '0';
@@ -746,19 +735,27 @@ function ca_testimonials_views_default_views() {
   $handler->display->display_options['fields']['field_ca_testimonial_t_link']['element_type'] = 'h3';
   $handler->display->display_options['fields']['field_ca_testimonial_t_link']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ca_testimonial_t_link']['click_sort_column'] = 'url';
-  $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Nid */
-  $handler->display->display_options['arguments']['nid']['id'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['table'] = 'node';
-  $handler->display->display_options['arguments']['nid']['field'] = 'nid';
-  $handler->display->display_options['arguments']['nid']['default_action'] = 'default';
-  $handler->display->display_options['arguments']['nid']['default_argument_type'] = 'node';
-  $handler->display->display_options['arguments']['nid']['summary']['number_of_records'] = '0';
-  $handler->display->display_options['arguments']['nid']['summary']['format'] = 'default_summary';
-  $handler->display->display_options['arguments']['nid']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['pane_title'] = 'CA Testimonials: Node Client Link';
   $handler->display->display_options['pane_category']['name'] = 'CA Node';
   $handler->display->display_options['pane_category']['weight'] = '0';
+
+  /* Display: CA Testimonials: Video Node View One */
+  $handler = $view->new_display('panel_pane', 'CA Testimonials: Video Node View One', 'panel_pane_1');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Video Testimonial */
+  $handler->display->display_options['fields']['field_ca_testimonial_t_vid']['id'] = 'field_ca_testimonial_t_vid';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_vid']['table'] = 'field_data_field_ca_testimonial_t_vid';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_vid']['field'] = 'field_ca_testimonial_t_vid';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_vid']['label'] = '';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_vid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ca_testimonial_t_vid']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_ca_testimonial_t_vid']['settings'] = array(
+    'file_view_mode' => 'worxco_video_displays_large',
+  );
+  $handler->display->display_options['pane_title'] = 'CA Testimonials: Video Node View One';
+  $handler->display->display_options['pane_category']['name'] = 'CA Node';
+  $handler->display->display_options['pane_category']['weight'] = '0';
+  $handler->display->display_options['inherit_panels_path'] = '1';
   $export['ca_testimonial_node'] = $view;
 
   $view = new view();
