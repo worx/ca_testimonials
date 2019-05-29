@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * ca_testimonials.features.field_instance.inc
@@ -199,6 +200,7 @@ function ca_testimonials_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'fences_wrapper' => 'div_div_div',
     'field_name' => 'field_ca_testimonial_t_vid',
     'label' => 'Video Testimonial',
     'required' => 0,
@@ -213,7 +215,7 @@ function ca_testimonials_field_default_field_instances() {
         'allowed_schemes' => array(
           'private' => 0,
           'public' => 0,
-          'vimeo' => 0,
+          'vimeo' => 'vimeo',
           'youtube' => 'youtube',
         ),
         'allowed_types' => array(
@@ -227,16 +229,15 @@ function ca_testimonials_field_default_field_instances() {
           'media_default--media_browser_my_files' => 0,
           'media_internet' => 'media_internet',
           'upload' => 0,
-          'youtube' => 'youtube',
         ),
         'manualcrop_crop_info' => 1,
         'manualcrop_default_crop_area' => 1,
         'manualcrop_enable' => 0,
-        'manualcrop_inline_crop' => FALSE,
+        'manualcrop_inline_crop' => 0,
         'manualcrop_instant_crop' => FALSE,
         'manualcrop_instant_preview' => 1,
-        'manualcrop_keyboard' => TRUE,
-        'manualcrop_maximize_default_crop_area' => FALSE,
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 0,
         'manualcrop_require_cropping' => array(
           '1000x312' => 0,
           'portfolio_medium' => 0,
